@@ -9,8 +9,6 @@ from selenium.webdriver.firefox.options import Options
 
 url = "https://blaze.com/en/games/crash"
 
-# cookies = {'AWSALBCORS':'lw5gN3kq+QIrspJ6O4c2xl4mMDxPXHy+Tjl3Nr1aFbXg9JEWJuQtZsUcYAB1hxMmsZ094FlnDHWzsEDTsS5gtPfDaXOXhDlFKc0ZTPMnjbGX2yKl8Xy/atV8jXVb; Expires=Sun, 25 Apr 2021 06:46:10 GMT; Path=/; SameSite=None; Secure'}
-# r = requests.get(url,cookies=cookies)
 
 option = Options()
 option.headless = True
@@ -32,8 +30,6 @@ while (count ==0):
 	soup = BeautifulSoup(html_content, 'html.parser')
 	resultado = (soup.find('span')).contents[0]
 	
-
-# 	lista = []
  
 	time.sleep(1.0)
 	str(resultado).split(',')
@@ -48,7 +44,7 @@ while (count ==0):
 	if resultado == ("1.00X"):	
 		playsound('C:/Users/Maicola/Contacts/alerta.mp3')
 		print("Entrada")
-	#	driver.find_elements_by_xpath(".//div[@class='place-bet']//button[@type='button'").click()
+	
 
 	
 
